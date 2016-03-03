@@ -1,41 +1,47 @@
 package proj.book;
 
 public class Book {
-	
-	String name;
-	String author;
-	int issueDate;
-	double price;
-	
-	
-	Book(String bName, String bAuthor, int date, double bPrice) {
-		
-		name = bName;
-		author = bAuthor;
-		issueDate = date;
-		price = bPrice;
-		
+
+	private String name, author;
+	private int issueDate, copies;
+	private double price;
+
+
+	Book(String name, String author, int issueDate, int copies, double price) {
+
+		this.name = name;
+		this.author = author;
+		this.issueDate = issueDate;
+		this.copies = copies;
+		this.price = price;
+
 	}
-	
-	String getName() {
-		
+
+	public String getName() {
+
 		return name;
-		
+
 	}
-	
-	String getAuthor() {
-		
+
+	public String getAuthor() {
+
 		return author;
 	}
-	
-	int getDate() {
-		
+
+	public int getDate() {
+
 		return issueDate;
 	}
-	
-	double getPrice() {
-		
+
+	public double getPrice() {
+
 		return price;
 	}
 	
+	public int getCopies() {
+		
+		return copies;
+		
+	}
+
 }
