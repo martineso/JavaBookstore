@@ -2,10 +2,10 @@ package proj.bookstore;
 
 import proj.book.Book;
 
-public interface BookStore {
-	
+public  interface BookStore {
+
 	void addBook(Book book, int quantity);
-	
+
 	//Lists all books
 	//Format - not yet configured
 	//
@@ -21,7 +21,7 @@ public interface BookStore {
 	//Should decrease the Book.issues field by
 	//the @quantity value
 	
-	void sellBook(int quantity);
+	void sellBook(String input);
 	
 	//Delete the book with the given title and issueDate
 	//Can use the this.findBook function to
