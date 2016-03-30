@@ -25,7 +25,7 @@ public class BookStore {
         }
     }
 
-        public void addBookEntity(Book book) throws IOException {
+        public void addBook(Book book) throws IOException {
             bookList.put(book.getName(),book);
             save();
         }
@@ -35,7 +35,7 @@ public class BookStore {
         return bookList.containsKey(word);
         }
 
-        public boolean sellBookEntity(Book book, int quantity){
+        public boolean sellBook(Book book, int quantity){
             if(book.getCopies()>0){
                 book.setCopies(book.getCopies() - quantity);
                 return true;
@@ -43,7 +43,7 @@ public class BookStore {
             return false;
         }
 
-        public List<Book> showContent(){
+        public List<Book> showSortedContentOfBookStore(){
             List<Book> allWordEntities = new ArrayList<>(bookList.values());
             Collections.sort(allWordEntities, new Comparator<Book>() {
 

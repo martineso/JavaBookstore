@@ -107,7 +107,7 @@ public class UserInputController {
 
         Book book = new Book(name,authorName,publisher,issueDate,copies,price,isForeign,UUID.randomUUID());
 
-        bookStore.addBookEntity(book);
+        bookStore.addBook(book);
 }
 
     private void search(){
@@ -123,7 +123,7 @@ public class UserInputController {
     }
 
     private void showContent() {
-        List<Book> bookEntities = bookStore.showContent();
+        List<Book> bookEntities = bookStore.showSortedContentOfBookStore();
         System.out.println("This bookstore has the following books: ");
         for (Book book : bookEntities) {
             System.out.println(book.toString());
@@ -147,7 +147,7 @@ public class UserInputController {
         System.out.println("How much copies of the book you want to buy ? : ");
         int quantity = Integer.parseInt(scanner.nextLine());
         List<Book> book = bookStore.search(name,true);
-        bookStore.sellBookEntity(book.get(0),quantity);
+        bookStore.sellBook(book.get(0),quantity);
 
     }
 
